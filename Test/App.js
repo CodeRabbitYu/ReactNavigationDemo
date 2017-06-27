@@ -91,11 +91,13 @@ const MyTab = TabNavigator({
     backBehavior:'none', // 按 back 键是否跳转到第一个Tab(首页)， none 为不跳转
     tabBarOptions:{
         // iOS属性
+        // 因为第二个tabbar是在页面中创建的，所以前景色的设置对其无效，当然也可以通过设置tintColor使其生效
+        activeTintColor:'red', // label和icon的前景色 活跃状态下（选中）。
+        inactiveTintColor:'orange', // label和icon的前景色 不活跃状态下(未选中)。
 
-        // activeTintColor:'', // label和icon的前景色 活跃状态下（选中）。
-        // activeBackgroundColor:'', //label和icon的背景色 活跃状态下（选中） 。
-        // inactiveTintColor:'', // label和icon的前景色 不活跃状态下(未选中)。
-        // inactiveBackgroundColor:'', // label和icon的背景色 不活跃状态下（未选中）。
+        activeBackgroundColor:'blue', //label和icon的背景色 活跃状态下（选中） 。
+        inactiveBackgroundColor:'green', // label和icon的背景色 不活跃状态下（未选中）。
+
         showLabel:true, // 是否显示label，默认开启。
         // style:{}, // tabbar的样式。
         // labelStyle:{}, //label的样式。

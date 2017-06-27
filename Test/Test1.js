@@ -22,8 +22,14 @@ export default class Test1 extends Component {
         <Text style={styles.instructions} onPress={()=>{
               const { navigate } = this.props.navigation;
               navigate('Detail1');
-          }}>
+        }}>
           点我跳转到Detail1
+        </Text>
+        <Text style={styles.instructions} onPress={()=>{
+          const { navigate } = this.props.navigation;
+              navigate('Detail2');
+        }}>
+          在Detail2中有reset和navigate的使用方法
         </Text>
         
       </View>
