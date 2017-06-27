@@ -59,6 +59,9 @@ export default class Detail2 extends Component {
                 <Text style={styles.welcome}>
                     Welcome to Detail2!
                 </Text>
+                <Text style={styles.instructions}>
+                    本页面的导航栏是纯自定义的，点击事件需要通过setParams来添加
+                </Text>
                 <Button title={'reset'} onPress={()=>{
                     this.props.navigation.dispatch(resetAction)
                 }} />
