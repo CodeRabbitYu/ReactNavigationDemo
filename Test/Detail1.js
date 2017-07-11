@@ -20,7 +20,19 @@ export default class Detail1 extends Component {
         headerRight:(
             <Text style={{color:'red',marginRight:20}} onPress={()=>navigation.state.params.navigatePress()}>我的</Text>
         ),
-    })
+    });
+
+    componentDidMount(){
+        // 通过在componentDidMount里面设置setParams将title的值动态修改
+        this.props.navigation.setParams({
+            headerTitle:'Detail1',
+            navigatePress:this.navigatePress,
+        });
+    }
+
+    navigatePress = () => {
+        alert('点击headerRight');
+    }
 
     render() {
         return (
