@@ -11,6 +11,9 @@ import {
 
 import React from 'react';
 
+import CardStackStyleInterpolator from 'react-navigation/src/views/CardStackStyleInterpolator';
+
+
 import {
     Image,
     StyleSheet,
@@ -33,6 +36,8 @@ const MainIcon = require('../resources/Main.png');
  * 2、Test2是在页面中通过属性创建Tabbar和导航
  * 3、Test3是通过封装navigationOptions实现Tabbar和导航的
  */
+
+
 
 const MyTab = TabNavigator({
     Test1: {
@@ -122,6 +127,8 @@ const MyTab = TabNavigator({
 
 });
 
+
+
 // 初始化StackNavigator
 const MyNav = StackNavigator({
     // 将TabNavigator包裹在StackNavigator里面可以保证跳转页面的时候隐藏tabbar
@@ -134,7 +141,10 @@ const MyNav = StackNavigator({
     },
     Detail2:{
         screen:Detail2,
-    }
+    },
+
+},{
+
 });
 
 const TabOptions = (tabBarTitle,normalImage,selectedImage,navTitle) => {

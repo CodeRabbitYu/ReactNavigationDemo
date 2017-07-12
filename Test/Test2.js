@@ -23,6 +23,9 @@ export default class Test2 extends Component {
         headerTitle:navigation.state.params?navigation.state.params.headerTitle:'Test2',
         tabBarLabel:navigation.state.params?navigation.state.params.tabBarLabel:'Test2',
         tabBarIcon: (({tintColor,focused}) => {
+            if(focused){
+                // 做操作
+            }
             return(
                 <Image
                     // 可以用过判断focused来修改选中图片和默认图片
