@@ -12,7 +12,7 @@ import {
   View
 } from 'react-native';
 
-import App from './Test/App.js';
+import App from './Test/Routers.js';
 
 export default class ReactNavigationDemo extends Component {
   render() {

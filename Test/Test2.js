@@ -20,6 +20,14 @@ export default class Test2 extends Component {
 
     static navigationOptions = ({navigation,screenProps}) => ({
         // 这里面的属性和App.js的navigationOptions是一样的。
+        tabBarOnPress:(({ route, index },jumpToIndex)=>{
+            // console.log(route);
+            // alert(index);
+            // alert(screenProps.themeColor)
+            jumpToIndex(index);
+        }),
+        // 下面就是文章中修改主题色的方法
+        headerStyle:{backgroundColor:screenProps?screenProps.themeColor:'#4ECBFC'},
         headerTitle:navigation.state.params?navigation.state.params.headerTitle:'Test2',
         tabBarLabel:navigation.state.params?navigation.state.params.tabBarLabel:'Test2',
         tabBarIcon: (({tintColor,focused}) => {

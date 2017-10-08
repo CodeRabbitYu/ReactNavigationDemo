@@ -11,6 +11,7 @@ import {
 } from 'react-native';
 
 export default class Detail3 extends Component {
+
     render() {
         return (
             <View style={styles.container}>

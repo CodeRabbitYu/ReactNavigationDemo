@@ -13,6 +13,13 @@ import {
 } from 'react-native';
 
 export default class Test3 extends Component {
+    static navigationOptions = ({navigation,screenProps}) => ({
+        tabBarOnPress:(({ route, index },jumpToIndex)=>{
+            // console.log(route);
+            // alert(index);
+            jumpToIndex(index);
+        }),
+    })
     render() {
         return (
             <View style={styles.container}>
