@@ -10,11 +10,14 @@ import {
     StyleSheet,
     Text,
     View,
-    Image
+    Image,
+    DeviceEventEmitter
 } from 'react-native';
 
 const GankIcon = require('../resources/Gank.png');
 const ShiTuIcon = require('../resources/ShiTu.png');
+
+let badgeNumber = 11;
 
 export default class Test2 extends Component {
 
@@ -23,7 +26,11 @@ export default class Test2 extends Component {
         tabBarOnPress:(({ route, index },jumpToIndex)=>{
             // console.log(route);
             // alert(index);
-            // alert(screenProps.themeColor)
+            // console.log(this.props);
+            // console.log(screenProps);
+            // alert(badgeNumber);
+
+            // DeviceEventEmitter.emit('badge',badgeNumber++);
             jumpToIndex(index);
         }),
         // 下面就是文章中修改主题色的方法
@@ -48,6 +55,9 @@ export default class Test2 extends Component {
         ),
     })
 
+    componentWillUnmount(){
+        this.subscription.remove();
+    };
     componentDidMount(){
         // 通过在componentDidMount里面设置setParams将title的值动态修改
         this.props.navigation.setParams({
@@ -62,6 +72,7 @@ export default class Test2 extends Component {
     }
 
     render() {
+        console.log(this.props);
         return (
             <View style={styles.container}>
                 <Text style={styles.welcome}>

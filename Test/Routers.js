@@ -132,7 +132,7 @@ const MyTab = TabNavigator({
 
 
 // 初始化StackNavigator
-export default MyApp = StackNavigator({
+export default  MyApp = StackNavigator({
     // 将TabNavigator包裹在StackNavigator里面可以保证跳转页面的时候隐藏tabbar
     MyTab:{
         screen:MyTab,
@@ -172,9 +172,9 @@ const TabOptions = (tabBarTitle,normalImage,selectedImage,navTitle) => {
 // const AppWithNavigationState = ({ dispatch, nav }) => (
 //     <MyApp navigation={addNavigationHelpers({ dispatch, state: nav })}/>
 // );
-
+//
 // const mapStateToProps = state => ({
 //     nav: state.nav,
 // });
-//
+
 // export default connect(mapStateToProps)(AppWithNavigationState);
