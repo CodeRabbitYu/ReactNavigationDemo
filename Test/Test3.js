@@ -14,10 +14,10 @@ import {
 
 export default class Test3 extends Component {
     static navigationOptions = ({navigation,screenProps}) => ({
-        tabBarOnPress:(({ route, index },jumpToIndex)=>{
+        tabBarOnPress:(({ scene ,jumpToIndex})=>{
             // console.log(route);
             // alert(index);
-            jumpToIndex(index);
+            jumpToIndex(scene['index']);
         }),
     })
     render() {

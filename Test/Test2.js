@@ -23,7 +23,7 @@ export default class Test2 extends Component {
 
     static navigationOptions = ({navigation,screenProps}) => ({
         // 这里面的属性和App.js的navigationOptions是一样的。
-        tabBarOnPress:(({ route, index },jumpToIndex)=>{
+        tabBarOnPress:(({ scene,jumpToIndex})=>{
             // console.log(route);
             // alert(index);
             // console.log(this.props);
@@ -31,7 +31,7 @@ export default class Test2 extends Component {
             // alert(badgeNumber);
 
             // DeviceEventEmitter.emit('badge',badgeNumber++);
-            jumpToIndex(index);
+            jumpToIndex(scene['index']);
         }),
         // 下面就是文章中修改主题色的方法
         headerStyle:{backgroundColor:screenProps?screenProps.themeColor:'#4ECBFC'},
