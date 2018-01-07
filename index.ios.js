@@ -17,7 +17,7 @@ import App from './Test/App.js';
 export default class ReactNavigationDemo extends Component {
   render() {
     return (
-     <App />
+     <App  />
     );
   }
 }

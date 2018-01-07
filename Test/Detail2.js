@@ -37,8 +37,13 @@ export default class Detail2 extends Component {
     static navigationOptions = ({navigation,screenProps}) => ({
         // 这里面的属性和App.js的navigationOptions是一样的。
         header:(
+<<<<<<< HEAD
             <NavStyle leftClick={()=>navigation.state.params?navigation.state.params.navigatePress():null}/>
         ),
+=======
+            <NavStyle backgroundColor={screenProps.themeColor} leftClick={()=>navigation.state.params?navigation.state.params.navigatePress():null}/>
+        )
+>>>>>>> origin/master
     })
 
     componentDidMount(){
@@ -67,6 +72,9 @@ export default class Detail2 extends Component {
                 }} />
                 <Button title={'navigate'} onPress={()=>{
                     this.props.navigation.dispatch(navigateAction)
+                }}/>
+                <Button title={'返回指定页面'} onPress={()=>{
+                    this.props.navigation.navigate('Test1')
                 }}/>
             </View>
         );
