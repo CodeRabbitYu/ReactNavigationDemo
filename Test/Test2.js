@@ -19,20 +19,15 @@ const ShiTuIcon = require('../resources/ShiTu.png');
 
 let badgeNumber = 11;
 
+function bar(func = () => foo) {
+    let foo = 'inner';
+    console.log(func());
+}
+
 export default class Test2 extends Component {
 
     static navigationOptions = ({navigation,screenProps}) => ({
         // 这里面的属性和App.js的navigationOptions是一样的。
-        tabBarOnPress:(({ scene,jumpToIndex})=>{
-            // console.log(route);
-            // alert(index);
-            // console.log(this.props);
-            // console.log(screenProps);
-            // alert(badgeNumber);
-
-            // DeviceEventEmitter.emit('badge',badgeNumber++);
-            jumpToIndex(scene['index']);
-        }),
         // 下面就是文章中修改主题色的方法
         headerStyle:{backgroundColor:screenProps?screenProps.themeColor:'#4ECBFC'},
         headerTitle:navigation.state.params?navigation.state.params.headerTitle:'Test2',
@@ -56,6 +51,8 @@ export default class Test2 extends Component {
         tabBarOnPress:(obj)=>{
             console.log(obj);
 
+            navigation.state.params.tabBarOnPress()
+
             obj.jumpToIndex(obj.scene.index)
         },
     })
@@ -68,8 +65,17 @@ export default class Test2 extends Component {
         this.props.navigation.setParams({
             headerTitle:'干货集中营',
             tabBarLabel:'干货',
-            navigatePress:this.navigatePress
+            navigatePress:this.navigatePress,
+            tabBarOnPress:this._tabBarOnPress
         });
+    }
+
+    _alert = () => {
+        alert('123');
+    }
+
+    _tabBarOnPress = () =>{
+        this._alert();
     }
 
     navigatePress = () => {
@@ -77,7 +83,7 @@ export default class Test2 extends Component {
     }
 
     render() {
-        console.log(this.props);
+        bar()
         return (
             <View style={styles.container}>
                 <Text style={styles.welcome}>

@@ -37,13 +37,8 @@ export default class Detail2 extends Component {
     static navigationOptions = ({navigation,screenProps}) => ({
         // 这里面的属性和App.js的navigationOptions是一样的。
         header:(
-<<<<<<< HEAD
-            <NavStyle leftClick={()=>navigation.state.params?navigation.state.params.navigatePress():null}/>
-        ),
-=======
             <NavStyle backgroundColor={screenProps.themeColor} leftClick={()=>navigation.state.params?navigation.state.params.navigatePress():null}/>
         )
->>>>>>> origin/master
     })
 
     componentDidMount(){

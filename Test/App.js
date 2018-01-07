@@ -4,32 +4,25 @@
 
 import React, {Component} from 'react';
 import {
-<<<<<<< HEAD
     StackNavigator,
     TabNavigator,
 } from 'react-navigation';
-
-import React from 'react';
 
 import CardStackStyleInterpolator from 'react-navigation/src/views/CardStack/CardStackStyleInterpolator';
 
 
 import {
     Image,
-=======
->>>>>>> origin/master
     StyleSheet,
     Text,
     View,
-    Image,
     Dimensions,
     DeviceEventEmitter
 } from 'react-native';
 
 const { width , height} = Dimensions.get('window');
 
-import { addNavigationHelpers, NavigationActions } from "react-navigation";
-import {Provider}from 'react-redux';
+// import {Provider}from 'react-redux';
 
 // global.badgeNumber=11;
 

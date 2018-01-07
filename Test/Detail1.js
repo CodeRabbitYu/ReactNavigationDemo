@@ -21,15 +21,7 @@ export default class Detail1 extends Component {
         headerRight:(
             <Text style={{color:'red',marginRight:20}} onPress={()=>navigation.state.params?navigation.state.params.navigatePress():null}>我的</Text>
         ),
-<<<<<<< HEAD
-        tabBarOnPress:(obj,{ route, index },jumpToIndex)=>{
-            console.log(route);
-            console.log(obj);
-        },
-=======
-        // 设置滑动返回的距离
         gestureResponseDistance:{horizontal:300},
->>>>>>> origin/master
 
     });
 

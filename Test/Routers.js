@@ -11,7 +11,7 @@ import {
 } from 'react-navigation';
 
 import React from 'react';
-import { connect } from 'react-redux';
+// import { connect } from 'react-redux';
 
 
 // import CardStackStyleInterpolator from 'react-navigation/src/views/CardStackStyleInterpolator';
