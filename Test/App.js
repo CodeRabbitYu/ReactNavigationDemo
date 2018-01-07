@@ -11,7 +11,7 @@ import {
 
 import React from 'react';
 
-import CardStackStyleInterpolator from 'react-navigation/src/views/CardStackStyleInterpolator';
+import CardStackStyleInterpolator from 'react-navigation/src/views/CardStack/CardStackStyleInterpolator';
 
 
 import {

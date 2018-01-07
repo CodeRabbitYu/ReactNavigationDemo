@@ -38,6 +38,11 @@ export default class Test2 extends Component {
         headerRight:(
             <Text style={{color:'red',marginRight:20}} onPress={()=>navigation.state.params.navigatePress()}>我的</Text>
         ),
+        tabBarOnPress:(obj)=>{
+            console.log(obj);
+
+            obj.jumpToIndex(obj.scene.index)
+        },
     })
 
     componentDidMount(){

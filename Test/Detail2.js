@@ -38,7 +38,7 @@ export default class Detail2 extends Component {
         // 这里面的属性和App.js的navigationOptions是一样的。
         header:(
             <NavStyle leftClick={()=>navigation.state.params?navigation.state.params.navigatePress():null}/>
-        )
+        ),
     })
 
     componentDidMount(){

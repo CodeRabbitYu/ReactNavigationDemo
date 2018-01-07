@@ -20,6 +20,11 @@ export default class Detail1 extends Component {
         headerRight:(
             <Text style={{color:'red',marginRight:20}} onPress={()=>navigation.state.params?navigation.state.params.navigatePress():null}>我的</Text>
         ),
+        tabBarOnPress:(obj,{ route, index },jumpToIndex)=>{
+            console.log(route);
+            console.log(obj);
+        },
+
     });
 
     componentDidMount(){
